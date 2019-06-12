@@ -3,7 +3,7 @@ use_frameworks!
 platform :ios, '8.0'
 
 target 'HBNetWorking_Example' do
-  pod 'HBNetWorking', :path => '../'
+    pod 'HBNetWorking', :path => '../'#这个是以Podfile为基点所在目录查找HBNetWorking所在的相对路径;这样壳工程就pod到本地组件库的内容了，原理跟使用平时的第三方远程库一样。只不过这次使用的是本地的。只不过本地的pod放在了Development Pods文件夹里面，这个文件夹里的内容其实是可以修改的，修改后立刻生效，会比远程pod需要提交版本号，本地再pod对应的版本号方便得多。
 
   target 'HBNetWorking_Tests' do
     inherit! :search_paths

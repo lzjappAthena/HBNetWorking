@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'HBNetWorking_Example' do
+  pod 'HBNetWorking', :path => '../'
+
+  target 'HBNetWorking_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
